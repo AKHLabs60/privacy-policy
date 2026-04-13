@@ -1,40 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialite - ScanDoc</title>
+  <meta name="description" content="Politique de confidentialite officielle de ScanDoc (AKH Labs)." />
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    h2 {
+      margin: 26px 0 10px;
+      font-size: 20px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+    }
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+    }
+    p, li { color: var(--muted); }
+    ul, ol { padding-left: 20px; }
+    .meta {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .topnav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .note {
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 24px;
+      color: #64748b;
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 12px; }
+      .card { padding: 16px; border-radius: 12px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
+  <main class="wrap">
+    <section class="card">
+      <nav class="topnav" aria-label="Navigation legale">
+        <a class="btn active" href="./index.html">Politique de confidentialite</a>
+        <a class="btn" href="./terms-of-use.html">Conditions d'utilisation</a>
+      </nav>
 
-<h1>Privacy Policy</h1>
-<p><strong>Last updated:</strong> April 2026</p>
+      <h1>Politique de Confidentialite - ScanDoc</h1>
+      <p class="meta"><strong>Date d'entree en vigueur :</strong> 12 avril 2026</p>
+      <p class="meta"><strong>Derniere mise a jour :</strong> 12 avril 2026</p>
+      <p class="meta"><strong>Version web (GitHub) :</strong> <a href="https://github.com/AKHLabs60/privacy-policy" target="_blank" rel="noopener noreferrer">github.com/AKHLabs60/privacy-policy</a></p>
 
-<h2>1. Data Collection</h2>
-<p>This application does not collect or store personal data on external servers.</p>
-<p>However, third-party services such as Google AdMob may collect anonymized data for advertising purposes.</p>
+      <h2>1. Editeur</h2>
+      <ul>
+        <li><strong>Application :</strong> ScanDoc</li>
+        <li><strong>Editeur :</strong> AKH Labs</li>
+        <li><strong>Statut :</strong> auto-entrepreneur</li>
+        <li><strong>Pays :</strong> France</li>
+        <li><strong>Contact support et confidentialite :</strong> <a href="mailto:akhlabs60@gmail.com">akhlabs60@gmail.com</a></li>
+      </ul>
 
-<h2>2. Local Storage</h2>
-<p>All scanned documents are stored locally on the user's device only and are not transmitted externally.</p>
+      <h2>2. Objet de cette politique</h2>
+      <p>Cette politique explique quelles donnees sont traitees dans ScanDoc, pourquoi, comment, avec qui elles peuvent etre partagees, et quels sont vos droits.</p>
+      <p>ScanDoc est une application mobile de scan, edition, OCR, export PDF/image et partage de documents.</p>
 
-<h2>3. Permissions</h2>
-<p>The application requires access to the camera to scan documents and storage to save them on the device.</p>
+      <h2>3. Principe general de ScanDoc</h2>
+      <p>Par defaut, ScanDoc fonctionne en <strong>local sur votre appareil</strong>.</p>
+      <ul>
+        <li>Pas de compte obligatoire en V1 publique.</li>
+        <li>Pas de synchronisation cloud publique active en V1 publique.</li>
+        <li>Pas d'abonnement in-app actif en V1 publique.</li>
+        <li>Pas de permission de stockage globale necessaire pour importer depuis galerie/fichiers (pickers systeme).</li>
+        <li>Le module cloud (Supabase) n'est utilise que si une configuration runtime existe <strong>et</strong> si l'utilisateur declenche explicitement un flux cloud (connexion, sauvegarde, restauration).</li>
+      </ul>
 
-<h2>4. Advertising</h2>
-<p>This application uses Google AdMob, which may collect anonymized information such as device data to provide relevant ads.</p>
+      <h2>4. Donnees traitees</h2>
+      <h3>4.1 Donnees que vous creez dans l'app</h3>
+      <ul>
+        <li>Photos/documents scannes (images d'origine et traitees)</li>
+        <li>PDF generes</li>
+        <li>Miniatures de documents</li>
+        <li>Texte OCR extrait</li>
+        <li>Signatures enregistrees</li>
+        <li>Textes predefinis enregistres</li>
+        <li>Noms de documents et dossiers</li>
+      </ul>
 
-<h2>5. No Cloud Usage</h2>
-<p>No user account or cloud storage is used in the current version of the application.</p>
+      <h3>4.2 Donnees techniques et preferences</h3>
+      <ul>
+        <li>Langue choisie</li>
+        <li>Preferences d'affichage et de scan</li>
+        <li>Etats d'acces premium/recompenses publicitaires</li>
+        <li>Compteurs de certaines actions (ex. regles de diffusion pub/rewarded)</li>
+        <li>Etat local de session cloud si fonctionnalite activee en environnement compatible</li>
+        <li>Si cloud active : e-mail de compte cloud, statut de connexion, horodatages de derniere sauvegarde/restauration et dernier message d'erreur cloud</li>
+      </ul>
 
-<h2>6. Future Updates</h2>
-<p>If new features such as cloud storage are added in the future, this privacy policy will be updated accordingly.</p>
+      <h3>4.3 Donnees publicitaires (Google AdMob)</h3>
+      <p>La V1 gratuite affiche des annonces via Google AdMob. Dans ce cadre, Google peut traiter, selon ses propres regles :</p>
+      <ul>
+        <li>Identifiants publicitaires et techniques (ex. Ad ID, identifiants d'instance SDK)</li>
+        <li>Informations appareil/reseau (ex. modele appareil, version OS, langue, adresse IP approximative, operateur, type de reseau)</li>
+        <li>Donnees de diffusion/interaction publicitaire (impressions, clics, ouvertures, diagnostics de diffusion)</li>
+        <li>Donnees de mesure et de lutte contre la fraude publicitaire</li>
+      </ul>
+      <p>Implementation actuelle de l'app :</p>
+      <ul>
+        <li>ScanDoc demande des annonces non personnalisees quand le SDK le permet (<code>requestNonPersonalizedAdsOnly</code>).</li>
+        <li>Les parametres de marquage enfant/consentement mineur sont configures cote SDK AdMob, mais les traitements publicitaires restent regis par Google.</li>
+      </ul>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Regles de confidentialite Google</a></li>
+        <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Fonctionnement des annonces Google</a></li>
+      </ul>
 
-<h2>7. User Rights (GDPR)</h2>
-<p>Users have the right to access, modify, or delete their data. Requests can be made via email.</p>
+      <h2>5. Permissions Android</h2>
+      <p>ScanDoc applique le minimum necessaire.</p>
+      <ul>
+        <li><strong>Camera (<code>android.permission.CAMERA</code>) :</strong> utilisee pour la capture de documents.</li>
+        <li><strong>Import galerie/fichiers :</strong> via pickers systeme (<code>expo-image-picker</code>, <code>expo-document-picker</code>), sans permission media globale.</li>
+        <li><strong>Permissions explicitement bloquees :</strong> audio et stockage large non necessaires (<code>RECORD_AUDIO</code>, <code>READ/WRITE_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_*</code>).</li>
+      </ul>
 
-<h2>8. Contact</h2>
-<p>Email: akhlabs60@gmail.com</p>
+      <h2>6. Finalites et bases legales (RGPD)</h2>
+      <ul>
+        <li><strong>Execution du service demande :</strong> scan, recadrage, edition, OCR, export et partage.</li>
+        <li><strong>Consentement / action utilisateur :</strong> autorisation camera, partage vers app tierce, impression.</li>
+        <li><strong>Interet legitime :</strong> securite, prevention d'abus, stabilite technique, monetisation publicitaire en version gratuite.</li>
+        <li><strong>Obligations legales :</strong> le cas echeant, respect des obligations applicables.</li>
+      </ul>
 
-<p>By using this application, you agree to this privacy policy.</p>
+      <h2>7. Partage des donnees</h2>
+      <ol>
+        <li><strong>Vers le service/app choisi explicitement par l'utilisateur</strong> (ex. Telegram, WhatsApp, e-mail, impression).</li>
+        <li><strong>Vers Google AdMob</strong> pour la diffusion et la mesure publicitaire.</li>
+        <li><strong>Vers Supabase uniquement si le cloud est activement utilise</strong> (connexion, sauvegarde, restauration declenchees par l'utilisateur).</li>
+      </ol>
+      <p>Hors de ces cas, ScanDoc ne vend pas vos donnees.</p>
+      <ul>
+        <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy Supabase</a></li>
+        <li><a href="https://supabase.com/legal/dpa" target="_blank" rel="noopener noreferrer">DPA / securite Supabase</a></li>
+      </ul>
 
+      <h2>8. Hebergement et transferts hors UE</h2>
+      <ul>
+        <li>Les donnees locales restent sur votre appareil.</li>
+        <li>Les services tiers (AdMob, eventuellement Supabase si active) peuvent impliquer des traitements hors UE selon leurs infrastructures.</li>
+        <li>Ces transferts sont encadres par les conditions et garanties de ces fournisseurs.</li>
+      </ul>
+
+      <h2>9. Duree de conservation</h2>
+      <ul>
+        <li><strong>Local (appareil) :</strong> jusqu'a suppression par l'utilisateur ou desinstallation.</li>
+        <li><strong>Partage externe :</strong> selon le service destinataire choisi.</li>
+        <li><strong>Publicite (AdMob) :</strong> selon la politique de conservation de Google.</li>
+        <li><strong>Cloud (si active) :</strong> tant que la sauvegarde existe sur le compte/service concerne.</li>
+      </ul>
+
+      <h2>10. Securite</h2>
+      <p>Des mesures techniques raisonnables sont appliquees :</p>
+      <ul>
+        <li>Stockage local dans l'espace applicatif (sandbox) du systeme mobile</li>
+        <li>Minimisation des permissions Android</li>
+        <li>Partage/export uniquement via des actions explicites utilisateur</li>
+        <li>Controles applicatifs sur operations sensibles (ex. verification d'existence de fichier avant partage, prevention de doubles demandes concurrentes)</li>
+        <li>Pour Supabase (si active) : acces authentifie, URL signees a duree courte pour restauration, canaux reseau securises</li>
+      </ul>
+      <p>ScanDoc n'active pas de SDK dedie d'analytics/crash-reporting dans le parcours V1 public.</p>
+      <p>Aucun systeme n'est totalement exempt de risque. L'utilisateur reste responsable de la protection de son appareil.</p>
+
+      <h2>11. Vos droits</h2>
+      <p>Selon la reglementation applicable (notamment RGPD), vous pouvez demander :</p>
+      <ul>
+        <li>Acces</li>
+        <li>Rectification</li>
+        <li>Effacement</li>
+        <li>Limitation</li>
+        <li>Opposition</li>
+        <li>Portabilite (quand applicable)</li>
+      </ul>
+      <p>Contact : <a href="mailto:akhlabs60@gmail.com">akhlabs60@gmail.com</a></p>
+      <p>Vous pouvez aussi supprimer vos donnees directement dans l'app (suppression docs/dossiers et suppression globale locale).</p>
+      <p>En France, vous pouvez saisir la CNIL en cas de desaccord persistant.</p>
+
+      <h2>12. Enfants</h2>
+      <p>ScanDoc n'est pas concue comme un service cible pour les jeunes enfants. Age minimum conseille : <strong>13+</strong> (ou age legal local).</p>
+
+      <h2>13. Ce que ScanDoc ne fait pas en V1 publique</h2>
+      <ul>
+        <li>Pas de compte utilisateur obligatoire</li>
+        <li>Pas de cloud public actif par defaut</li>
+        <li>Pas d'abonnement in-app actif</li>
+        <li>Pas de SDK dedie d'analytics/crash-reporting dans le parcours V1 public</li>
+        <li>Declaration Data Safety Play Store alignee avec le fonctionnement reel de la V1</li>
+      </ul>
+
+      <h2>14. Modifications de cette politique</h2>
+      <p>Cette politique peut etre mise a jour selon les evolutions fonctionnelles, legales ou techniques. La date en tete indique la version en vigueur.</p>
+
+      <h2>15. Contact</h2>
+      <ul>
+        <li><strong>E-mail :</strong> <a href="mailto:akhlabs60@gmail.com">akhlabs60@gmail.com</a></li>
+        <li><strong>Editeur :</strong> AKH Labs</li>
+        <li><strong>Pays :</strong> France</li>
+        <li><strong>Conditions d'utilisation :</strong> <a href="./terms-of-use.html">terms-of-use.html</a></li>
+      </ul>
+
+      <p class="note">Document legal officiel pour la version publique V1 de ScanDoc.</p>
+      <footer>© AKH Labs - ScanDoc</footer>
+    </section>
+  </main>
 </body>
 </html>
